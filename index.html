@@ -1,132 +1,242 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alberto & Teresa | Nuestra boda</title>
+<title>Alberto & Teresa | 28.08.2027</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --cream: #f8f5ef;
-  --sand: #e8dfd1;
-  --terracotta: #b87560;
-  --ink: #45433e;
+  --paper: #f7f4ec;
+  --green: #69765e;
+  --darkgreen: #475641;
+  --terracotta: #ad7462;
+  --ink: #4d5146;
+  --sand: #ded5c4;
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
-  background: var(--cream);
+  background: var(--paper);
   color: var(--ink);
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
+  font-weight: 300;
 }
+
 nav {
-  padding: 22px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247,244,236,.96);
+  padding: 17px 8px;
+  text-align: center;
   border-bottom: 1px solid var(--sand);
-  font-size: 10px;
-  letter-spacing: 2px;
 }
+
 nav a {
-  color: var(--ink);
   text-decoration: none;
-  margin: 0 10px;
+  color: var(--green);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin: 0 9px;
 }
+
 .hero {
   min-height: 690px;
-  padding: 95px 20px 55px;
+  padding: 75px 20px 45px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.eyebrow {
-  font-size: 11px;
-  letter-spacing: 4px;
+
+.eyebrow, .section-label {
+  font-size: 10px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  color: var(--green);
 }
-h1 {
+
+h1, h2, h3, .time {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(65px, 13vw, 105px);
   font-weight: 400;
-  line-height: .95;
-  margin: 35px 0;
 }
+
+h1 {
+  font-size: clamp(65px, 13vw, 105px);
+  line-height: .88;
+  margin: 35px 0 25px;
+  color: var(--darkgreen);
+}
+
 .amp {
   color: var(--terracotta);
   font-style: italic;
 }
-.date {
+
+.hero-date {
   font-family: 'Cormorant Garamond', serif;
   font-size: 27px;
-  letter-spacing: 2px;
-}
-.location {
-  font-size: 11px;
-  letter-spacing: 3px;
-  margin-top: 15px;
-}
-.landscape {
-  width: 100%;
-  max-width: 700px;
-  margin-top: 55px;
-}
-section {
-  padding: 85px 22px;
-  border-top: 1px solid var(--sand);
-}
-h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 43px;
-  font-weight: 400;
-  margin: 15px 0 25px;
-}
-.section-label {
-  font-size: 10px;
   letter-spacing: 3px;
   color: var(--terracotta);
 }
+
+.hero-place {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 12px;
+}
+
+.landscape {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+}
+
+section {
+  padding: 80px 22px;
+  text-align: center;
+  border-top: 1px solid var(--sand);
+}
+
+h2 {
+  font-size: 43px;
+  color: var(--darkgreen);
+  margin: 14px 0 25px;
+}
+
 p {
-  font-size: 13px;
-  line-height: 2;
-  max-width: 520px;
+  max-width: 510px;
   margin: 15px auto;
+  font-size: 12px;
+  line-height: 2;
 }
-.details {
+
+.countdown {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
-  margin-top: 45px;
+  gap: 17px;
+  flex-wrap: wrap;
+  margin-top: 35px;
 }
-.detail {
-  width: 230px;
-}
-.detail h3 {
+
+.count-item { min-width: 62px; }
+
+.count-number {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 27px;
-  font-weight: 400;
+  font-size: 36px;
+  color: var(--terracotta);
 }
+
+.count-label {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.schedule {
+  max-width: 480px;
+  margin: 45px auto 0;
+  text-align: left;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 88px 25px 1fr;
+  min-height: 105px;
+}
+
+.event-time {
+  text-align: right;
+  padding: 2px 13px 0 0;
+}
+
+.time {
+  font-size: 26px;
+  color: var(--terracotta);
+}
+
+.event-line {
+  position: relative;
+  border-left: 1px solid #a8ae98;
+}
+
+.event-dot {
+  position: absolute;
+  left: -5px;
+  top: 9px;
+  width: 9px;
+  height: 9px;
+  background: var(--green);
+  border-radius: 50%;
+}
+
+.event-info { padding: 0 0 28px 15px; }
+
+.event-info h3 {
+  font-size: 25px;
+  color: var(--darkgreen);
+  margin: 0 0 6px;
+}
+
+.event-info p {
+  font-size: 10px;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.provisional {
+  display: inline-block;
+  font-size: 8px;
+  color: var(--green);
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.venue-card {
+  max-width: 480px;
+  margin: 35px auto 0;
+  padding: 35px 20px;
+  border: 1px solid var(--sand);
+}
+
+.venue-card h3 {
+  font-size: 32px;
+  color: var(--darkgreen);
+  margin: 12px 0;
+}
+
 .button {
   display: inline-block;
-  padding: 15px 28px;
-  margin-top: 25px;
-  background: var(--terracotta);
+  background: var(--green);
   color: white;
   text-decoration: none;
-  font-size: 10px;
+  padding: 14px 25px;
+  margin-top: 20px;
+  font-size: 9px;
   letter-spacing: 2px;
 }
+
 footer {
-  padding: 55px 15px;
-  background: #eee8dd;
+  text-align: center;
+  padding: 60px 20px;
+  background: #eae5d9;
 }
-footer h2 { font-size: 38px; }
-footer p { font-size: 11px; }
-@media(max-width: 480px) {
-  nav a { margin: 0 5px; font-size: 9px; }
-  .hero { min-height: 620px; }
+
+footer h2 { font-size: 39px; }
+
+footer p { font-size: 10px; }
+
+@media(max-width: 430px) {
+  nav a { margin: 0 5px; font-size: 8px; }
+  .hero { min-height: 600px; }
   section { padding: 65px 18px; }
 }
 </style>
@@ -136,81 +246,198 @@ footer p { font-size: 11px; }
 
 <nav>
   <a href="#inicio">INICIO</a>
-  <a href="#celebracion">CELEBRACIÓN</a>
-  <a href="#ubicacion">UBICACIÓN</a>
-  <a href="#asistencia">ASISTENCIA</a>
+  <a href="#cuenta">CUENTA ATRÁS</a>
+  <a href="#programa">PROGRAMA</a>
+  <a href="#lugar">UBICACIÓN</a>
 </nav>
 
 <header class="hero" id="inicio">
-  <div class="eyebrow">Nos hace mucha ilusión compartirlo contigo</div>
+  <div class="eyebrow">Una fecha, una historia, un día especial</div>
 
   <h1>
     Alberto<br>
     <span class="amp">&</span> Teresa
   </h1>
 
-  <div class="date">28 · 08 · 2027</div>
-  <div class="location">SAN JUAN DE ALICANTE</div>
+  <div class="hero-date">28 · 08 · 2027</div>
+  <div class="hero-place">SAN JUAN DE ALICANTE</div>
 
-  <svg class="landscape" viewBox="0 0 650 190" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 115 L90 75 L145 91 L230 30 L280 65 L345 15 L410 83 L470 65 L530 100 L650 75" fill="none" stroke="#b87560" stroke-width="1.5"/>
-    <path d="M0 125 Q150 105 300 125 T650 120" fill="none" stroke="#b87560" stroke-width="1"/>
-    <path d="M0 145 Q150 125 300 145 T650 140" fill="none" stroke="#b87560" stroke-width="1"/>
-    <path d="M0 165 Q150 145 300 165 T650 160" fill="none" stroke="#b87560" stroke-width="1"/>
+  <svg class="landscape" viewBox="0 0 650 230"
+       xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 130 L90 105 L150 115 L230 65 L280 90 L345 25 L410 95 L470 75 L530 120 L650 85"
+      fill="none" stroke="#69765e" stroke-width="2"/>
+    <path d="M0 145 Q160 125 320 145 T650 140"
+      fill="none" stroke="#ad7462" stroke-width="1.5"/>
+    <path d="M0 170 Q160 150 320 170 T650 165"
+      fill="none" stroke="#ad7462" stroke-width="1.5"/>
+    <path d="M0 195 Q160 175 320 195 T650 190"
+      fill="none" stroke="#ad7462" stroke-width="1"/>
+    <circle cx="540" cy="40" r="19" fill="none" stroke="#ad7462"/>
   </svg>
+
+  <p>Nos encantará compartir este día contigo.</p>
 </header>
 
-<section>
-  <div class="section-label">UN DÍA PARA RECORDAR</div>
-  <h2>¡Nos casamos!</h2>
-  <p>
-    Hay momentos que merecen ser compartidos con las personas
-    que forman parte de nuestra historia.
-    Nos encantaría que nos acompañaras en este día tan especial.
-  </p>
-  <p>¡Tenemos muchas ganas de celebrarlo contigo!</p>
-</section>
+<section id="cuenta">
+  <div class="section-label">EL TIEMPO VUELA</div>
+  <h2>Cuenta atrás</h2>
+  <p>Ya queda menos para celebrar uno de los días más especiales de nuestra vida.</p>
 
-<section id="celebracion">
-  <div class="section-label">RESERVA LA FECHA</div>
-  <h2>La celebración</h2>
-
-  <div class="details">
-    <div class="detail">
-      <h3>Ceremonia</h3>
-      <p>Próximamente compartiremos el lugar y la hora.</p>
+  <div class="countdown">
+    <div class="count-item">
+      <div class="count-number" id="days">---</div>
+      <div class="count-label">DÍAS</div>
     </div>
-    <div class="detail">
-      <h3>Celebración</h3>
-      <p>Muy pronto tendrás todos los detalles del banquete.</p>
+    <div class="count-item">
+      <div class="count-number" id="hours">--</div>
+      <div class="count-label">HORAS</div>
+    </div>
+    <div class="count-item">
+      <div class="count-number" id="minutes">--</div>
+      <div class="count-label">MINUTOS</div>
+    </div>
+    <div class="count-item">
+      <div class="count-number" id="seconds">--</div>
+      <div class="count-label">SEGUNDOS</div>
     </div>
   </div>
 </section>
 
-<section id="ubicacion">
-  <div class="section-label">CÓMO LLEGAR</div>
-  <h2>La ubicación</h2>
-  <p>
-    Estamos preparando todos los detalles para que
-    puedas acompañarnos sin preocupaciones.
-  </p>
-  <p>Próximamente añadiremos las ubicaciones y las indicaciones.</p>
+<section id="programa">
+  <div class="section-label">28 DE AGOSTO DE 2027</div>
+  <h2>El gran día</h2>
+  <p>Todos los momentos que compartiremos juntos.</p>
+
+  <div class="schedule">
+
+    <div class="event">
+      <div class="event-time">
+        <div class="time">18:00</div>
+      </div>
+      <div class="event-line"><span class="event-dot"></span></div>
+      <div class="event-info">
+        <h3>Ceremonia</h3>
+        <p>El comienzo de nuestra historia juntos.</p>
+        <span class="provisional">HORARIO PROVISIONAL</span>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-time">
+        <div class="time">19:00</div>
+      </div>
+      <div class="event-line"><span class="event-dot"></span></div>
+      <div class="event-info">
+        <h3>Cóctel</h3>
+        <p>Un momento para brindar, conversar y disfrutar.</p>
+        <span class="provisional">HORARIO PROVISIONAL</span>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-time">
+        <div class="time">21:00</div>
+      </div>
+      <div class="event-line"><span class="event-dot"></span></div>
+      <div class="event-info">
+        <h3>Banquete</h3>
+        <p>Una cena para compartir y celebrar.</p>
+        <span class="provisional">HORARIO PROVISIONAL</span>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-time">
+        <div class="time">22:00</div>
+      </div>
+      <div class="event-line"><span class="event-dot"></span></div>
+      <div class="event-info">
+        <h3>Fiesta</h3>
+        <p>¡Empieza la música, el baile y la diversión!</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-time">
+        <div class="time">03:00</div>
+      </div>
+      <div class="event-line"><span class="event-dot"></span></div>
+      <div class="event-info">
+        <h3>Fin de la celebración</h3>
+        <p>El final de una noche inolvidable.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="asistencia">
-  <div class="section-label">QUEREMOS CONTAR CONTIGO</div>
+<section id="lugar">
+  <div class="section-label">NOS ENCONTRAMOS EN</div>
+  <h2>El lugar</h2>
+
+  <div class="venue-card">
+    <div class="section-label">NUESTRA CELEBRACIÓN</div>
+    <h3>Los Jardines de Abril</h3>
+    <p>
+      Carrer Sant Antoni, 149<br>
+      03550 Sant Joan d'Alacant<br>
+      Alicante, España
+    </p>
+    <p>
+      Ceremonia, cóctel, banquete y fiesta.
+      Todo en el mismo lugar.
+    </p>
+    <a class="button"
+       href="https://www.google.com/maps/search/?api=1&query=Jardines+de+Abril+Sant+Joan+d%27Alacant"
+       target="_blank">
+       CÓMO LLEGAR
+    </a>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">NOS ENCANTARÁ VERTE</div>
   <h2>¿Nos acompañas?</h2>
   <p>
-    Nos encantará saber si puedes compartir este día con nosotros.
-    Próximamente habilitaremos el formulario de confirmación.
+    Estamos deseando compartir este día contigo.
+    Muy pronto podrás confirmar tu asistencia desde aquí.
   </p>
 </section>
 
 <footer>
   <h2>Alberto <span class="amp">&</span> Teresa</h2>
-  <p>28 de agosto de 2027 · San Juan de Alicante</p>
+  <p>28 de agosto de 2027</p>
   <p>Con mucho cariño, esperamos verte allí.</p>
 </footer>
+
+<script>
+function updateCountdown() {
+  const wedding = new Date("2027-08-28T18:00:00+02:00");
+  const now = new Date();
+  let diff = wedding - now;
+
+  if (diff <= 0) {
+    document.getElementById("days").textContent = "0";
+    document.getElementById("hours").textContent = "0";
+    document.getElementById("minutes").textContent = "0";
+    document.getElementById("seconds").textContent = "0";
+    return;
+  }
+
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const minutes = Math.floor((diff % 3600000) / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
